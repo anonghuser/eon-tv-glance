@@ -1,5 +1,5 @@
-import getUrl from './thumbUrl';
-import channels from './channels';
+import getUrl from './thumbUrl.mjs';
+import channels from './channels.mjs';
 
 let channel_id = Object.values(channels)[0];
 

@@ -1,0 +1,91 @@
+.thumb {
+  position:relative;
+  width: 16.666666%;
+  aspect-ratio: 16 / 9;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 5px;
+  font-weight: 1000;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0);
+}
+.thumb::before {
+  content:"";
+  background: red var(--url0);
+  background-size: cover;
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  z-index: -1;
+}
+
+
+.thumb:focus {
+  outline:1px solid;
+  outline-offset:-1px;
+  font-weight: 1000;
+  color: white;
+  text-shadow: 1px 0px black, -1px -0px black, 0px 1px black, 0px -1px black, 1px 1px 2px black;
+  font-weight: 1000;
+  aspect-ratio:16/189;
+}
+.thumb:focus::after {
+  content:"";
+  outline:3px solid red;
+  outline-offset:-3px;
+  background: 
+    var(--url0) left 0/auto 5% no-repeat,
+    var(--url0) right 5.263%/auto 5% no-repeat,
+
+    var(--url1) left 10.526%/auto 5% no-repeat,
+    var(--url1) right 15.789%/auto 5% no-repeat,
+
+    var(--url2) left 21.053%/auto 5% no-repeat,
+    var(--url2) right 26.316%/auto 5% no-repeat,
+
+    var(--url3) left 31.579%/auto 5% no-repeat,
+    var(--url3) right 36.842%/auto 5% no-repeat,
+
+    var(--url4) left 42.105%/auto 5% no-repeat,
+    var(--url4) right 47.368%/auto 5% no-repeat,
+
+    var(--url5) left 52.632%/auto 5% no-repeat,
+    var(--url5) right 57.895%/auto 5% no-repeat,
+
+    var(--url6) left 63.158%/auto 5% no-repeat,
+    var(--url6) right 68.421%/auto 5% no-repeat,
+
+    var(--url7) left 73.684%/auto 5% no-repeat,
+    var(--url7) right 78.947%/auto 5% no-repeat,
+
+    var(--url8) left 84.211%/auto 5% no-repeat,
+    var(--url8) right 89.474%/auto 5% no-repeat,
+
+    var(--url9) left 94.737%/auto 5% no-repeat,
+    var(--url9) right 100%/auto 5% no-repeat,
+    
+      blue;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 600%;
+  aspect-ratio: 96 / 180;
+}
+.thumb:nth-of-type(6n+2)::after {
+  left: -100%
+}
+.thumb:nth-of-type(6n+3)::after {
+  left: -200%
+}
+.thumb:nth-of-type(6n+4)::after {
+  left: -300%
+}
+.thumb:nth-of-type(6n+5)::after {
+  left: -400%
+}
+.thumb:nth-of-type(6n+6)::after {
+  left: -500%
+}

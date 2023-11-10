@@ -6,5 +6,5 @@ const c = f => ({y: 'getUTCFullYear', m: 'getUTCMonth', d: 'getUTCDate'})[f];
 const d = (ts, f) => z(new Date(ts)[c(f)]()+(f=='m'));
 
 export let baseUrl = 'https://ffrw-web.vivacom-be.cdn.united.cloud';
-export const getUrl = (channel_id, timestamp) => `${baseUrl}/channel/${channel_id}/1/${d(timestamp, 'y')}-${d(timestamp, 'm')}-${d(timestamp, 'd')}/${channel_id}_${+new Date(timestamp)}.webp`;
+export const getUrl = (channel_id, timestamp) => `${baseUrl}/channel/${channel_id}/1/${d(timestamp, 'y')}-${d(timestamp, 'm')}-${d(timestamp, 'd')}/${channel_id}_${+new Date(timestamp).setSeconds(0)}.webp`;
 export default getUrl;

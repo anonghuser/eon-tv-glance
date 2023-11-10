@@ -35,16 +35,21 @@ const Wheel = {
           width: '100%',
           top: '50%',
           transform: `translateY(${(i-centerIndex)*100-50}%)`,
-          ztransition: 'transform .6s ease-out',
+          transition: 'transform .6s ease-out',
         },
-        zoncreate: (vnode) => {
+        onclick: e => {
+          const vnode = this.positionWrappers.find(el => el.dom == e.target)
+          onchange({target: vnode.attrs})
+          el.attrs?.onclick?.(e)
+        },
+        oncreate: (vnode) => {
           el.attrs.oncreate?.(vnode)
           vnode.dom.animate([
             {transform: `translateY(-50%) translateY(${direction}00vh)`},
             {}
           ], 600)
         },
-        zonbeforeremove: (vnode) => {
+        onbeforeremove: (vnode) => {
           return Promise.all([
             el.attrs.onbeforeremove?.(vnode),
             new Promise(resolve=>vnode.dom.animate([

@@ -1,9 +1,9 @@
 export const channels = {
-  'XY Plus': 277,
-  'Hustler': 72,
-  'Fantazzy': 278,
-  'Dorcel': 6,
-  'Private': 73,
-  'Vivid': 281,  
+  277: 'XY Plus',
+  72: 'Hustler',
+  278: 'Fantazzy',
+  6: 'Dorcel',
+  73: 'Private',
+  281: 'Vivid',
 };
 export default channels;
